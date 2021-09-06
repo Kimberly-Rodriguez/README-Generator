@@ -6,20 +6,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./keyfile/generateMarkdown.js");
 
-// Array of questions
-
-const questions = [
-  "What is your Github username?",
-  "What is your email?",
-  "What is the tittle of your project?",
-  "Please enter a description of your project:",
-  "Please enter a short note on the installation process of your project:",
-  "Please submit a short discription of your application's usage:",
-  "Please select a license that best support your app:",
-  "Please note all contributiors to your project:",
-  "Please input any test description to your application:"
-]
-
 
 // A function to write README file
 function writeToFile(fileName, data) {
@@ -27,7 +13,7 @@ function writeToFile(fileName, data) {
   let licenseLink = generateMarkdown.renderLicenseLink(data.license);
   let licenseText = generateMarkdown.renderLicenseSection(data.license, data.contributors);
 
-  let readMe =`# ${data.title} ${licenseBadge}                
+  let readMe =`# ${data.title} 
 
   
 ## Table of Contents
@@ -40,7 +26,6 @@ function writeToFile(fileName, data) {
 * [Contact](#contact)
 
 
-
 ## Description
 ${data.description}
 
@@ -51,10 +36,10 @@ ${data.installation}
 ${data.usage}
 
 ## Contributors
-${data.contributors}
+${licenseText} ${data.contributors}
 
 ## License
-${data.license} Link: ${licenseLink} ${licenseText}
+${data.license} Link: ${licenseLink} 
 
 ## Tests
 ${data.test}
@@ -73,55 +58,55 @@ function init() {
     .prompt([
         {
           type: 'input',
-          message: 'question[0]',
+          message: ' What is your Github username?',
           name: 'username',
           
         },
         {
           type: 'input',
-          message: 'question[1]',
+          message: 'What is your email?',
           name: 'email',
         
         },
         {
           type: 'input',
-          message: 'question[2]',
+          message: 'What is the tittle of your project?',
           name: 'title',
         
         },
         {
           type: 'input',
-          message: 'question[3]',
+          message: 'Please enter a description of your project:',
           name: 'description',
         
         },
         {
           type: 'input',
-          message: 'question[4]',
+          message: 'Please enter a short note on the installation process of your project:',
           name: 'installation',
         
         },
         {
           type: 'input',
-          message: 'question[5]',
+          message: 'Please submit a short discription of your application\'s usage:',
           name: 'usage',
         },
         {
           type: 'list',
-          message: 'question[6]',
+          message: 'Please select a license that best support your app:',
           choices: ["MIT", "IBM", "Mozilla", "Other"],
           name: 'license',
         
         },
         {
           type: 'input',
-          message: 'question[7]',
+          message: 'Please note all contributiors to your project:',
           name: 'contributors',
         
         },
         {
           type: 'input',
-          message: 'question[8]',
+          message: 'Please input any test description to your application:',
           name: 'test',
         },
       ])
