@@ -42,7 +42,7 @@ ${data.usage}
 * [UCLA Extension Coding Bootcamp](https://bootcamp.uclaextension.edu/coding/)
 
 ## License
-${data.license} Link:${licenseBadge}
+${data.license} Link: ${licenseLink} ${licenseText} ${licenseBadge}
 
 
 ## Tests
@@ -105,7 +105,7 @@ function init() {
         },
         {
           type: 'input',
-          message: 'Please note all contributiors to your project:',
+          message: 'Please note all contributiors to your project(if you are the only contributor please write your name):',
        
           name: 'contributors',
         
