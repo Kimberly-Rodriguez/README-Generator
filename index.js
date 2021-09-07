@@ -16,6 +16,7 @@ function writeToFile(fileName, data) {
 
   let readMe =`# ${data.title} 
 
+  ${licenseBadge}   
   
 ## Table of Contents
 * [Description](#description)

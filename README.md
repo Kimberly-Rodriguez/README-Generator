@@ -33,11 +33,12 @@ For additional details on installation and deployment, please [click here](https
 ```md
 This command-line application accepts user input and creates a professional README.md with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
 
-The following image shows the web application's appearance and functionality:
-
-!["Youtubelink"](Images/screenShot01.png)
 ````
+The following image and video shows the web application's appearance and functionality:
 
+!["screen shot 1 of applicating showing the end product"](screenShot01.png)
+
+[video link](https://drive.google.com/file/d/1pSnf3ThV1nMR_jCuZkwSNK-e1MFMQY2l/view)
 
 
 ## Usage
