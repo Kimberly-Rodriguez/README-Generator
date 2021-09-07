@@ -16,9 +16,18 @@
 To quickly and easily create a README file that uses a command-line application. Thus allowing the project creator to allocate more time to programming the application itself. 
 
 ## Instalation
+* Clone the repo (please reference the links below).
+```md 
+git@github.com:Kimberly-Rodriguez/README-Generator.git
+```
+
+* Install NPM packages
+```md 
+npm install npm@latest -g
+```
 
 
-For installation and deployment, please [click here](https://kimberly-rodriguez.github.io/README-Generator/). The GitHub link is [here](https://github.com/Kimberly-Rodriguez/README-Generator).
+For additional details on installation and deployment, please [click here](https://kimberly-rodriguez.github.io/README-Generator/). The GitHub link is [here](https://github.com/Kimberly-Rodriguez/README-Generator).
 
 
 ```md
