@@ -69,11 +69,14 @@ function renderLicenseSection(license, name) {
   }
 }
 
-function rendercontribution(contribution, name) {
-  if (license === "UCLA") {
-    return "[UCLA Extension Coding Bootcamp](https://bootcamp.uclaextension.edu/coding/)"
-  }
-}
+// function rendercontributors(contributors, name) {
+//   if (contributors === "UCLA") {
+//     return "[UCLA Extension Coding Bootcamp](https://bootcamp.uclaextension.edu/coding/)"
+//   }
+//   if (contributors === "Other(s)"){
+//     return ""
+//   }
+// }
 
 // a function to generate markdown for README
 function generateMarkdown(data) {
@@ -84,5 +87,6 @@ module.exports =
  {
   renderLicenseBadge,
   renderLicenseLink,
-  renderLicenseSection
+  renderLicenseSection,
+  // rendercontributors
  }

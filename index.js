@@ -12,6 +12,7 @@ function writeToFile(fileName, data) {
   let licenseBadge = generateMarkdown.renderLicenseBadge(data.license);
   let licenseLink = generateMarkdown.renderLicenseLink(data.license);
   let licenseText = generateMarkdown.renderLicenseSection(data.license, data.contributors);
+  // let contributionlink = generateMarkdown.rendercontributors(data.contributors);
 
   let readMe =`# ${data.title} 
 
@@ -38,6 +39,8 @@ ${data.usage}
 ## Contributors
  ${data.contributors} 
 
+* [UCLA Extension Coding Bootcamp](https://bootcamp.uclaextension.edu/coding/)
+
 ## License
 ${data.license} Link:${licenseBadge}
 
@@ -45,13 +48,14 @@ ${data.license} Link:${licenseBadge}
 ## Tests
 ${data.test}
 
-## Contact / Questions
-If you have any questions about my work or wish to collaborate in the future please contact me via my email OR find me on GitHub: ${data.email} , ${data.username}`
+##  Questions | Contact 
+If you have any questions about my work OR wish to collaborate in the future please contact me via email: ${data.email} OR feel free to connect via GitHub : [${data.username}](https://github.com/Kimberly-Rodriguez).`
+
     
   fs.writeFile(fileName, readMe, (err) =>
   err ? console.error(err) : console.log('Success!')
 );
-}
+};
 
 // function to initialize app and array of questions for user input
 function init() {
@@ -102,12 +106,13 @@ function init() {
         {
           type: 'input',
           message: 'Please note all contributiors to your project:',
+       
           name: 'contributors',
         
         },
         {
           type: 'input',
-          message: 'Please input any test description to your application:',
+          message: 'Please input any test description to your application -- if you dont have any at the moment please write n/a:',
           name: 'test',
         },
       ])
