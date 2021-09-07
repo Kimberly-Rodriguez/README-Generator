@@ -69,6 +69,12 @@ function renderLicenseSection(license, name) {
   }
 }
 
+function rendercontribution(contribution, name) {
+  if (license === "UCLA") {
+    return "[UCLA Extension Coding Bootcamp](https://bootcamp.uclaextension.edu/coding/)"
+  }
+}
+
 // a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}`;

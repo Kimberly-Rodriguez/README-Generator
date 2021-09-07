@@ -36,15 +36,16 @@ ${data.installation}
 ${data.usage}
 
 ## Contributors
- ${data.contributors}
+ ${data.contributors} 
 
 ## License
-${data.license}
+${data.license} Link:${licenseBadge}
+
 
 ## Tests
 ${data.test}
 
-## Contact 
+## Contact / Questions
 If you have any questions about my work or wish to collaborate in the future please contact me via my email OR find me on GitHub: ${data.email} , ${data.username}`
     
   fs.writeFile(fileName, readMe, (err) =>
