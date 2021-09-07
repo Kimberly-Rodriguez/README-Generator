@@ -36,16 +36,16 @@ ${data.installation}
 ${data.usage}
 
 ## Contributors
-${licenseText} ${data.contributors}
+ ${data.contributors}
 
 ## License
-${data.license} Link: ${licenseLink} 
+${data.license}
 
 ## Tests
 ${data.test}
 
 ## Contact 
-If you have any questions about my work or wish to collaborate in the future please contact me via my email OR find me on GitHub: ${data.email} , ${data.username}>`
+If you have any questions about my work or wish to collaborate in the future please contact me via my email OR find me on GitHub: ${data.email} , ${data.username}`
     
   fs.writeFile(fileName, readMe, (err) =>
   err ? console.error(err) : console.log('Success!')
